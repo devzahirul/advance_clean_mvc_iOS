@@ -2,13 +2,15 @@
 //  AppDelegate.swift
 //  AdvancCleanMVCiOS
 //
-//  Created by Islam Md. Zahirul on 19/10/20.
+//  Created by Anamika Deb on 19/10/20.
+//  Copyright © 2020 Anamika Deb. All rights reserved.
 //
 
 import UIKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

@@ -2,7 +2,8 @@
 //  AdvancCleanMVCiOSUITests.swift
 //  AdvancCleanMVCiOSUITests
 //
-//  Created by Islam Md. Zahirul on 19/10/20.
+//  Created by Anamika Deb on 19/10/20.
+//  Copyright © 2020 Anamika Deb. All rights reserved.
 //
 
 import XCTest
@@ -34,7 +35,7 @@ class AdvancCleanMVCiOSUITests: XCTestCase {
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
             // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
+            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
                 XCUIApplication().launch()
             }
         }
