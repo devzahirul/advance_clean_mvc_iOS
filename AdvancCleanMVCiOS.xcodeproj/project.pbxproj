@@ -16,6 +16,7 @@
 		FA9898E8253D392400273193 /* AdvancCleanMVCiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9898E7253D392400273193 /* AdvancCleanMVCiOSTests.swift */; };
 		FA9898F3253D392400273193 /* AdvancCleanMVCiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9898F2253D392400273193 /* AdvancCleanMVCiOSUITests.swift */; };
 		FA989908253D44BE00273193 /* LaunchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA989907253D44BE00273193 /* LaunchRouter.swift */; };
+		FA989923253D4B3F00273193 /* StoryboardInitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA989922253D4B3F00273193 /* StoryboardInitable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		FA9898F2253D392400273193 /* AdvancCleanMVCiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancCleanMVCiOSUITests.swift; sourceTree = "<group>"; };
 		FA9898F4253D392400273193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA989907253D44BE00273193 /* LaunchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRouter.swift; sourceTree = "<group>"; };
+		FA989922253D4B3F00273193 /* StoryboardInitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 		FA98990E253D48DC00273193 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				FA989921253D4B1400273193 /* Protocol */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -209,6 +212,14 @@
 				FA9898D6253D392300273193 /* Main.storyboard */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		FA989921253D4B1400273193 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				FA989922253D4B3F00273193 /* StoryboardInitable.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +354,7 @@
 			files = (
 				FA9898D5253D392300273193 /* ViewController.swift in Sources */,
 				FA989908253D44BE00273193 /* LaunchRouter.swift in Sources */,
+				FA989923253D4B3F00273193 /* StoryboardInitable.swift in Sources */,
 				FA9898D1253D392300273193 /* AppDelegate.swift in Sources */,
 				FA9898D3253D392300273193 /* SceneDelegate.swift in Sources */,
 			);
