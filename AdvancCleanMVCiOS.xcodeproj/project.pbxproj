@@ -17,6 +17,7 @@
 		FA9898F3253D392400273193 /* AdvancCleanMVCiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9898F2253D392400273193 /* AdvancCleanMVCiOSUITests.swift */; };
 		FA989908253D44BE00273193 /* LaunchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA989907253D44BE00273193 /* LaunchRouter.swift */; };
 		FA989923253D4B3F00273193 /* StoryboardInitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA989922253D4B3F00273193 /* StoryboardInitable.swift */; };
+		FA98992A253D514000273193 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA989929253D514000273193 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		FA9898F4253D392400273193 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA989907253D44BE00273193 /* LaunchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRouter.swift; sourceTree = "<group>"; };
 		FA989922253D4B3F00273193 /* StoryboardInitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitable.swift; sourceTree = "<group>"; };
+		FA989929253D514000273193 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,8 @@
 		FA98990E253D48DC00273193 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				FA989928253D512D00273193 /* Fonts */,
+				FA989927253D511B00273193 /* Extensions */,
 				FA989921253D4B1400273193 /* Protocol */,
 			);
 			path = Misc;
@@ -171,6 +175,7 @@
 			children = (
 				FA9898D9253D392400273193 /* Assets.xcassets */,
 				FA9898DE253D392400273193 /* Info.plist */,
+				FA989929253D514000273193 /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -220,6 +225,20 @@
 				FA989922253D4B3F00273193 /* StoryboardInitable.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		FA989927253D511B00273193 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA989928253D512D00273193 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +376,7 @@
 				FA989923253D4B3F00273193 /* StoryboardInitable.swift in Sources */,
 				FA9898D1253D392300273193 /* AppDelegate.swift in Sources */,
 				FA9898D3253D392300273193 /* SceneDelegate.swift in Sources */,
+				FA98992A253D514000273193 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
