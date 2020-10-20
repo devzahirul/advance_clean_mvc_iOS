@@ -1,7 +1,85 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Signin View Controller-->
+        <scene sceneID="hLU-wS-bx5">
+            <objects>
+                <viewController storyboardIdentifier="SigninViewController" id="kcl-Qh-xiq" customClass="SigninViewController" customModule="AdvancCleanMVCiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F3z-hW-MSl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="company-profile-icon-business-" translatesAutoresizingMaskIntoConstraints="NO" id="ecE-iI-hxM">
+                                <rect key="frame" x="87" y="144" width="240" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="YFu-X4-gul"/>
+                                    <constraint firstAttribute="height" constant="180" id="oDd-8i-I6f"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oh3-s0-uV6">
+                                <rect key="frame" x="20" y="364" width="374" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="bvy-Ua-ABg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fuS-MM-ma4">
+                                <rect key="frame" x="20" y="424" width="374" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="x5W-JG-1oi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGQ-Nf-yDe">
+                                <rect key="frame" x="132" y="489" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="00R-JX-cC9"/>
+                                    <constraint firstAttribute="width" constant="150" id="M3U-OB-dga"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Sign in">
+                                    <color key="titleColor" red="0.0" green="0.24681261434580309" blue="0.43638161988172597" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedSigninButton:" destination="kcl-Qh-xiq" eventType="touchUpInside" id="TaE-vG-KrK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hGQ-Nf-yDe" firstAttribute="centerX" secondItem="F3z-hW-MSl" secondAttribute="centerX" id="9Rm-R5-1Hb"/>
+                            <constraint firstItem="fuS-MM-ma4" firstAttribute="top" secondItem="oh3-s0-uV6" secondAttribute="bottom" constant="15" id="B80-FE-BUW"/>
+                            <constraint firstItem="IFL-fL-iro" firstAttribute="trailing" secondItem="oh3-s0-uV6" secondAttribute="trailing" constant="20" id="BgC-pb-OzJ"/>
+                            <constraint firstItem="ecE-iI-hxM" firstAttribute="top" secondItem="IFL-fL-iro" secondAttribute="top" constant="100" id="Dbz-5b-mBt"/>
+                            <constraint firstItem="ecE-iI-hxM" firstAttribute="centerX" secondItem="F3z-hW-MSl" secondAttribute="centerX" id="QLn-Ao-h4h"/>
+                            <constraint firstItem="fuS-MM-ma4" firstAttribute="leading" secondItem="IFL-fL-iro" secondAttribute="leading" constant="20" id="Vdj-Ng-3YW"/>
+                            <constraint firstItem="oh3-s0-uV6" firstAttribute="top" secondItem="ecE-iI-hxM" secondAttribute="bottom" constant="40" id="qjn-My-ta1"/>
+                            <constraint firstItem="IFL-fL-iro" firstAttribute="trailing" secondItem="fuS-MM-ma4" secondAttribute="trailing" constant="20" id="vfk-mw-ZrE"/>
+                            <constraint firstItem="oh3-s0-uV6" firstAttribute="leading" secondItem="IFL-fL-iro" secondAttribute="leading" constant="20" id="vtE-Bd-kQY"/>
+                            <constraint firstItem="hGQ-Nf-yDe" firstAttribute="top" secondItem="fuS-MM-ma4" secondAttribute="bottom" constant="20" id="yBb-7D-ibB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IFL-fL-iro"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailField" destination="oh3-s0-uV6" id="Ybb-Hc-HGA"/>
+                        <outlet property="passwordField" destination="fuS-MM-ma4" id="9SV-O8-waj"/>
+                        <outlet property="signInButton" destination="hGQ-Nf-yDe" id="DZK-eG-qZW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Zt-2m-AbH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85.507246376811594" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="company-profile-icon-business-" width="1024" height="1024"/>
+    </resources>
 </document>
