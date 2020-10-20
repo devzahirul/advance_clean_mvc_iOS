@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "company-profile-icon-business-.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
