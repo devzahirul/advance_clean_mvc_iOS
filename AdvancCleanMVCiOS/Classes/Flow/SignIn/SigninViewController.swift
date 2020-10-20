@@ -16,8 +16,10 @@ class SigninViewController: UIViewController, StoryboardInitable {
     @IBOutlet weak var signInButton: UIButton!
     
     static var storyboardName: String = "Signin"
-    
+    private lazy var noticeRouter = NoticeRouter()
+
     //MARK: IBACTIONS
     @IBAction func clickedSigninButton(_ sender: Any) {
+        noticeRouter.execute(context: self)
     }
 }

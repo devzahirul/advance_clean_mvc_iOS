@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notice View Controller-->
+        <scene sceneID="H2y-Vt-AJy">
+            <objects>
+                <viewController storyboardIdentifier="NoticeViewController" id="cJe-7o-6Qp" customClass="NoticeViewController" customModule="AdvancCleanMVCiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Usb-H5-APn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oej-UW-DSK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.24681261430000001" blue="0.43638161990000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Notice" id="AEc-Sz-5aZ"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qKA-qf-CaL">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Oej-UW-DSK" firstAttribute="trailing" secondItem="qKA-qf-CaL" secondAttribute="trailing" id="K8W-cG-ZKi"/>
+                            <constraint firstItem="L95-tB-KX2" firstAttribute="trailing" secondItem="qKA-qf-CaL" secondAttribute="trailing" id="KqA-iJ-Lnj"/>
+                            <constraint firstItem="Oej-UW-DSK" firstAttribute="top" secondItem="L95-tB-KX2" secondAttribute="top" id="NS1-C0-Aps"/>
+                            <constraint firstItem="qKA-qf-CaL" firstAttribute="leading" secondItem="L95-tB-KX2" secondAttribute="leading" id="QEF-Pz-tj8"/>
+                            <constraint firstItem="L95-tB-KX2" firstAttribute="bottom" secondItem="qKA-qf-CaL" secondAttribute="bottom" id="Tm8-bA-puJ"/>
+                            <constraint firstItem="Oej-UW-DSK" firstAttribute="leading" secondItem="qKA-qf-CaL" secondAttribute="leading" id="jJC-TX-2HT"/>
+                            <constraint firstItem="qKA-qf-CaL" firstAttribute="top" secondItem="Oej-UW-DSK" secondAttribute="bottom" id="sFl-D4-xfq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L95-tB-KX2"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="qKA-qf-CaL" id="geP-ER-7JN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NQb-qQ-KZf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113" y="70"/>
+        </scene>
+    </scenes>
+</document>
