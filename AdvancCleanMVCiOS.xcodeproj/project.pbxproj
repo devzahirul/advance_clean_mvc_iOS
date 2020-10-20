@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3361A068253EA3E000D495BC /* SigninRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3361A067253EA3E000D495BC /* SigninRouter.swift */; };
+		3361A06A253EA3F500D495BC /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3361A069253EA3F500D495BC /* SigninViewController.swift */; };
+		3361A06C253EA40A00D495BC /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3361A06B253EA40A00D495BC /* Signin.storyboard */; };
 		33D6EE09253D5D1D0029D452 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D6EE08253D5D1D0029D452 /* AppDelegate.swift */; };
 		33D6EE0B253D5D1D0029D452 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D6EE0A253D5D1D0029D452 /* SceneDelegate.swift */; };
 		33D6EE20253D5D1E0029D452 /* AdvancCleanMVCiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D6EE1F253D5D1E0029D452 /* AdvancCleanMVCiOSTests.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3361A067253EA3E000D495BC /* SigninRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninRouter.swift; sourceTree = "<group>"; };
+		3361A069253EA3F500D495BC /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		3361A06B253EA40A00D495BC /* Signin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
 		33D6EE05253D5D1D0029D452 /* AdvancCleanMVCiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdvancCleanMVCiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33D6EE08253D5D1D0029D452 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33D6EE0A253D5D1D0029D452 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +211,9 @@
 		FA3EBD2F253DCD3700A9093F /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				3361A067253EA3E000D495BC /* SigninRouter.swift */,
+				3361A069253EA3F500D495BC /* SigninViewController.swift */,
+				3361A06B253EA40A00D495BC /* Signin.storyboard */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -327,6 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3361A06C253EA40A00D495BC /* Signin.storyboard in Resources */,
 				33D6EE55253D63D90029D452 /* LaunchScreen.storyboard in Resources */,
 				33D6EE4A253D5E080029D452 /* Assets.xcassets in Resources */,
 				FA3EBD1A253DCBC800A9093F /* Launch.storyboard in Resources */,
@@ -354,11 +364,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3361A068253EA3E000D495BC /* SigninRouter.swift in Sources */,
 				33D6EE09253D5D1D0029D452 /* AppDelegate.swift in Sources */,
 				33D6EE4E253D5E080029D452 /* LaunchRouter.swift in Sources */,
 				FA3EBD2B253DCC2E00A9093F /* Presenter.swift in Sources */,
 				33D6EE4C253D5E080029D452 /* StoryboardInitable.swift in Sources */,
 				33D6EE0B253D5D1D0029D452 /* SceneDelegate.swift in Sources */,
+				3361A06A253EA3F500D495BC /* SigninViewController.swift in Sources */,
 				FA3EBD15253DCBB800A9093F /* LaunchViewController.swift in Sources */,
 				33D6EE53253D5F560029D452 /* Constants.swift in Sources */,
 				FA3EBD23253DCC2100A9093F /* ServiceLocator.swift in Sources */,
