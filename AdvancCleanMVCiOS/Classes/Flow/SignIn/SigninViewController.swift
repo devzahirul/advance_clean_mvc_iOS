@@ -6,4 +6,18 @@
 //  Copyright © 2020 Anamika Deb. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class SigninViewController: UIViewController, StoryboardInitable {
+    
+    //MARK: IBOUTLETS
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
+    
+    static var storyboardName: String = "Signin"
+    
+    //MARK: IBACTIONS
+    @IBAction func clickedSigninButton(_ sender: Any) {
+    }
+}
