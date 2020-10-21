@@ -18,20 +18,30 @@ protocol NoticeListAdapterDelegate: class {
 class NoticeListAdapter: NSObject {
     weak var delegate: NoticeListAdapterDelegate?
     
-    override init() {
-        super.init()
-        delegate?.noticeListAdapterRequestedViewUpdate(adapter: self)
+    private var noticeList = NoticeModel.getTestingData(){
+        didSet {
+            delegate?.noticeListAdapterRequestedViewUpdate(adapter: self)
+        }
+    }
+    
+    var noticeListQuantity: Int {
+        return noticeList.count
+    }
+    
+    func getNoticeList(atIndexPath indexPath: NSIndexPath) -> NoticeModel {
+        return noticeList[indexPath.row]
     }
 }
 
 extension NoticeListAdapter: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return noticeListQuantity
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: NoticeCell.id, for: indexPath) as! NoticeCell
-
+        let notice = getNoticeList(atIndexPath: indexPath as NSIndexPath)
+        cell.configure(notice: notice)
         return cell
     }
 }

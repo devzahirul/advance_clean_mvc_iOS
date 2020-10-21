@@ -9,33 +9,33 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoticeCell" rowHeight="150" id="DVO-2b-vmg" customClass="NoticeCell" customModule="AdvancCleanMVCiOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="640" height="150"/>
+            <rect key="frame" x="0.0" y="0.0" width="640" height="140"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DVO-2b-vmg" id="USd-Cl-bgh">
-                <rect key="frame" x="0.0" y="0.0" width="640" height="150"/>
+                <rect key="frame" x="0.0" y="0.0" width="640" height="140"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zi0-R7-b6v">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Company Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zi0-R7-b6v">
                         <rect key="frame" x="35" y="21" width="570" height="21"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2d-lY-8V6">
-                        <rect key="frame" x="35" y="50" width="570" height="41"/>
+                        <rect key="frame" x="35" y="50" width="570" height="40"/>
                         <string key="text">Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description</string>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.10.2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viF-8u-Dxk">
-                        <rect key="frame" x="35" y="99" width="90.5" height="21"/>
+                        <rect key="frame" x="35" y="98" width="90.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly Report" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqH-zJ-PNH">
-                        <rect key="frame" x="481" y="99" width="124" height="21"/>
+                        <rect key="frame" x="481" y="98" width="124" height="21"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -43,6 +43,8 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="Zi0-R7-b6v" firstAttribute="top" secondItem="USd-Cl-bgh" secondAttribute="topMargin" constant="10" id="1kj-Z3-vEW"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="GqH-zJ-PNH" secondAttribute="bottom" constant="10" id="FA4-ju-Zqo"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="viF-8u-Dxk" secondAttribute="bottom" constant="10" id="JUY-AY-hUI"/>
                     <constraint firstItem="e2d-lY-8V6" firstAttribute="top" secondItem="Zi0-R7-b6v" secondAttribute="bottom" constant="8" id="KrW-6U-QWW"/>
                     <constraint firstItem="GqH-zJ-PNH" firstAttribute="top" secondItem="e2d-lY-8V6" secondAttribute="bottom" constant="8" id="PRl-pC-yr7"/>
                     <constraint firstItem="viF-8u-Dxk" firstAttribute="top" secondItem="e2d-lY-8V6" secondAttribute="bottom" constant="8" id="Z4K-pD-uI9"/>
