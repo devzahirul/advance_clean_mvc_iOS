@@ -29,6 +29,7 @@ extension NoticeRouter : Router{
         //setup router
         let noticeVC = NoticeViewController.create()
         noticeVC.modalPresentationStyle = .fullScreen
+        currentViewController = noticeVC
         context.present(noticeVC, animated: false, completion: nil)
     }
 }
