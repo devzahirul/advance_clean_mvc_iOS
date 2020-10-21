@@ -26,6 +26,7 @@ class NoticeViewController: UIViewController, StoryboardInitable {
     // MARK: - Private methods
     private func setupTableView() {
         tableView.delegate = self
+        tableView.dataSource = self
         print("NOTIceCELL: \(NoticeCell.id)")
         tableView.register(NoticeCell.cellNib, forCellReuseIdentifier: NoticeCell.id)
     }
@@ -43,5 +44,7 @@ extension NoticeViewController : UITableViewDelegate, UITableViewDataSource
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 140
+    }
 }
