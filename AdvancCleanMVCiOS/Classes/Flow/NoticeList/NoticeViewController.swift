@@ -14,36 +14,49 @@ class NoticeViewController: UIViewController, StoryboardInitable {
     
     
     static var storyboardName: String = "Notice"
-    
+    private lazy var noticeListAdapter = NoticeListAdapter()
+
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupTableView()
+        setupAdapter()
     }
     
     // MARK: - Private methods
     private func setupTableView() {
         tableView.delegate = self
-        tableView.dataSource = self
         print("NOTIceCELL: \(NoticeCell.id)")
         tableView.register(NoticeCell.cellNib, forCellReuseIdentifier: NoticeCell.id)
     }
+    
+    private func setupAdapter() {
+        tableView.dataSource = noticeListAdapter
+        noticeListAdapter.delegate = self
+    }
 }
 
-extension NoticeViewController : UITableViewDelegate, UITableViewDataSource
+extension NoticeViewController : NoticeListAdapterDelegate
 {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+    func noticeListAdapterRequestedViewUpdate(adapter: NoticeListAdapter) {
+        tableView.reloadData()
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: NoticeCell.id, for: indexPath) as! NoticeCell
+}
 
-        return cell
-    }
-    
+extension NoticeViewController : UITableViewDelegate
+{
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 5
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: NoticeCell.id, for: indexPath) as! NoticeCell
+//
+//        return cell
+//    }
+//
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
     }
