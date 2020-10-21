@@ -26,7 +26,10 @@ protocol SignInPresenter: PresenterType {
 }
 
 extension SignInPresenter {
-    func showSigin(){}
+    func showSigin(){
+        let signinRouter = SigninRouter()
+        signinRouter.execute(context: currentViewController)
+    }
 }
 
 
@@ -35,7 +38,10 @@ protocol NoticeListPresenter: PresenterType {
 }
 
 extension NoticeListPresenter {
-    func showNoticeList(){}
+    func showNoticeList(){
+        let noticeRouter = NoticeRouter()
+        noticeRouter.execute(context: currentViewController)
+    }
 }
 
 protocol NoticeDetailPresenter: PresenterType {

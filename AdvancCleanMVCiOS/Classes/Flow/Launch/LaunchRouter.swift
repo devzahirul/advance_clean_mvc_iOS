@@ -26,8 +26,9 @@ extension LaunchRouter: Router {
         
         //check your opening logic
         //setup router
-        
-        let navController = UINavigationController.init(rootViewController: LaunchViewController.create())
+        let viewController = LaunchViewController.create()
+        viewController.setRouter(router: self)
+        let navController = UINavigationController.init(rootViewController: viewController)
         navController.navigationBar.isHidden = true
         
         currentViewController = navController

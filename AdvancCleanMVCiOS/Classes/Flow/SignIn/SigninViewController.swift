@@ -8,6 +8,8 @@
 
 import UIKit
 
+typealias SigninRouterInterface = NoticeListPresenter
+
 class SigninViewController: UIViewController, StoryboardInitable {
     
     //MARK: IBOUTLETS
@@ -16,10 +18,16 @@ class SigninViewController: UIViewController, StoryboardInitable {
     @IBOutlet weak var signInButton: UIButton!
     
     static var storyboardName: String = "Signin"
-    private lazy var noticeRouter = NoticeRouter()
-
+    private var router: SigninRouterInterface!
+    
     //MARK: IBACTIONS
     @IBAction func clickedSigninButton(_ sender: Any) {
-        noticeRouter.execute(context: self)
+//        noticeRouter.execute(context: self)
+        router.showNoticeList()
+    }
+    
+    // Setup Methods
+    func setRouter(router: SigninRouterInterface) {
+        self.router = router
     }
 }

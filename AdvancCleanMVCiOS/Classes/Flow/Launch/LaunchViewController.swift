@@ -8,14 +8,22 @@
 
 import UIKit
 
+typealias LaunchRouterInterface = SignInPresenter
+
 class LaunchViewController: UIViewController, StoryboardInitable {
     static var storyboardName: String = "Launch"
     
-    private lazy var signinRouter = SigninRouter()
-
+    private var router: LaunchRouterInterface!
+    
+    // Life cycles
     override func viewDidLoad() {
         super.viewDidLoad()
         // Add logic for view represent
-        signinRouter.execute(context: self)
+        router.showSigin()
+    }
+    
+    // Setup Methods
+    func setRouter(router: LaunchRouterInterface) {
+        self.router = router
     }
 }

@@ -29,6 +29,8 @@ extension SigninRouter : Router{
         //setup router
         let signVC = SigninViewController.create()
         signVC.modalPresentationStyle = .fullScreen
+        signVC.setRouter(router: self)
+        currentViewController = signVC
         context.present(signVC, animated: false, completion: nil)
     }
 }
