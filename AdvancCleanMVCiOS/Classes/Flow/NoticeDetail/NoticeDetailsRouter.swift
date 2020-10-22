@@ -1,14 +1,14 @@
 //
-//  NoticeRouter.swift
+//  NoticeDetailsRouter.swift
 //  AdvancCleanMVCiOS
 //
-//  Created by Anamika Deb on 20/10/20.
+//  Created by Anamika Deb on 22/10/20.
 //  Copyright © 2020 Anamika Deb. All rights reserved.
 //
 
 import UIKit
 
-class NoticeRouter: NoticeDetailPresenter {
+class NoticeDetailsRouter: NoticeListPresenter {
     var currentViewController: UIViewController!
     
     var serviceLocator: ServiceLocator!
@@ -21,18 +21,17 @@ class NoticeRouter: NoticeDetailPresenter {
     
 }
 
-extension NoticeRouter : Router{
+extension NoticeDetailsRouter : Router{
     // Create & show signin view
     func execute(context: UIViewController, info: AnyObject?) {
         
         //check your opening logic
         //setup router
-        let noticeVC = NoticeViewController.create()
+        let noticeVC = NoticeDetailsViewController.create()
         noticeVC.modalPresentationStyle = .fullScreen
-        noticeVC.setRouter(router: self)
+        noticeVC.notice = info as? NoticeModel
+//        noticeVC.setRouter(router: self)
         currentViewController = noticeVC
         context.present(noticeVC, animated: false, completion: nil)
     }
 }
-
-

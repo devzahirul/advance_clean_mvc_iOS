@@ -11,13 +11,13 @@ import UIKit
 class NoticeCell: UITableViewCell, CellInterface {
     
     @IBOutlet weak var companyNameLbl: UILabel!
-    @IBOutlet weak var noticeDescriptionLbl: UILabel!
+    @IBOutlet weak var noticeNameLbl: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var noticeTypeLbl: UILabel!
     
     func configure(notice: NoticeModel){
         companyNameLbl.text = notice.companyName
-        noticeDescriptionLbl.text = notice.description
+        noticeNameLbl.text = notice.noticeName
         dateLbl.text = notice.createDate
         noticeTypeLbl.text = notice.noticeCategory
     }

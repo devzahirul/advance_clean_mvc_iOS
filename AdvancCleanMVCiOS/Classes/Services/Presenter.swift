@@ -11,7 +11,7 @@ import UIKit
 
 protocol Router: class {
     associatedtype Context
-    func execute(context: Context)
+    func execute(context: Context, info: AnyObject?)
 }
 
 @objc protocol PresenterType {
@@ -28,7 +28,7 @@ protocol SignInPresenter: PresenterType {
 extension SignInPresenter {
     func showSigin(){
         let signinRouter = SigninRouter()
-        signinRouter.execute(context: currentViewController)
+        signinRouter.execute(context: currentViewController, info: nil)
     }
 }
 
@@ -40,17 +40,22 @@ protocol NoticeListPresenter: PresenterType {
 extension NoticeListPresenter {
     func showNoticeList(){
         let noticeRouter = NoticeRouter()
-        noticeRouter.execute(context: currentViewController)
+        noticeRouter.execute(context: currentViewController, info: nil)
     }
 }
 
 protocol NoticeDetailPresenter: PresenterType {
     func showNoticeDetail(with noticeId: Int)
     func showNoticeDetail(with noticeId: String)
+    func showNoticeDetail(with notice: NoticeModel)
 }
 
 
 extension NoticeDetailPresenter {
     func showNoticeDetail(with noticeId: Int){}
     func showNoticeDetail(with noticeId: String){}
+    func showNoticeDetail(with notice: NoticeModel){
+        let noticeRouter = NoticeDetailsRouter()
+        noticeRouter.execute(context: currentViewController, info: notice as AnyObject)
+    }
 }

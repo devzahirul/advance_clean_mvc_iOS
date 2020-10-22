@@ -10,6 +10,7 @@ import Foundation
 
 struct NoticeModel {
     let companyName: String
+    let noticeName: String
     let description: String
     let isNew: Bool
     let createDate: String
@@ -19,26 +20,30 @@ struct NoticeModel {
     static func getTestingData() -> [NoticeModel] {
         var data = [NoticeModel]()
         let n1 = NoticeModel.init(companyName: "ABCD_1",
-                                  description: "Notice_1",
+                                  noticeName: "Notice_1",
+                                  description: "Notice_1_Description",
                                   isNew: true,
                                   createDate: "20/10/2020",
                                   hasPdf: true,
                                   noticeCategory:"Monthly Report")
         let n2 = NoticeModel.init(companyName: "ABCD_2",
-                                  description: "Notice_2",
+                                  noticeName: "Notice_2",
+                                  description: "Notice_2_Description",
                                   isNew: false,
                                   createDate: "19/10/2020",
                                   hasPdf: false,
                                   noticeCategory:"Cleaning Report")
         
         let n3 = NoticeModel.init(companyName: "ABCD_3",
-                                  description: "Notice_3",
+                                  noticeName: "Notice_3",
+                                  description: "Notice_3_Description",
                                   isNew: false,
                                   createDate: "21/10/2020",
                                   hasPdf: false,
                                   noticeCategory:"Monthly Report")
         let n4 = NoticeModel.init(companyName: "ABCD_4",
-                                  description: "Notice_4",
+                                  noticeName: "Notice_4",
+                                  description: "Notice_4_Description",
                                   isNew: false,
                                   createDate: "21/10/2020",
                                   hasPdf: true,

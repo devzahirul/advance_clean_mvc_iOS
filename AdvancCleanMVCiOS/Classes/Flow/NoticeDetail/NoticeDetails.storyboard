@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notice Details View Controller-->
+        <scene sceneID="WUE-xi-Eht">
+            <objects>
+                <viewController storyboardIdentifier="NoticeDetailsViewController" id="ZXn-WN-sgK" customClass="NoticeDetailsViewController" customModule="AdvancCleanMVCiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tO1-C7-zxh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tJ-DI-H9D">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.24681261430000001" blue="0.43638161990000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Notice Details" id="Eac-M2-EG6">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="Aq9-yr-nal">
+                                            <connections>
+                                                <action selector="clickedBackButton:" destination="ZXn-WN-sgK" id="NAP-2p-wkb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6a-wN-3pY">
+                                <rect key="frame" x="20" y="103" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notice Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLN-xh-iAq">
+                                <rect key="frame" x="20" y="147" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvK-RE-kmf">
+                                <rect key="frame" x="20" y="213" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSh-ZC-XZK">
+                                <rect key="frame" x="356" y="213" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notice Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sm5-TR-rP1">
+                                <rect key="frame" x="20" y="264" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sm5-TR-rP1" firstAttribute="trailing" secondItem="n6a-wN-3pY" secondAttribute="trailing" id="1fI-gg-EC2"/>
+                            <constraint firstItem="sm5-TR-rP1" firstAttribute="top" secondItem="QvK-RE-kmf" secondAttribute="bottom" constant="30" id="4Vu-gp-QRV"/>
+                            <constraint firstItem="n6a-wN-3pY" firstAttribute="leading" secondItem="QTT-64-c81" secondAttribute="leading" constant="20" id="4rI-sR-xvQ"/>
+                            <constraint firstItem="BLN-xh-iAq" firstAttribute="top" secondItem="n6a-wN-3pY" secondAttribute="bottom" constant="20" id="5yi-2d-zYD"/>
+                            <constraint firstItem="qSh-ZC-XZK" firstAttribute="trailing" secondItem="n6a-wN-3pY" secondAttribute="trailing" id="C8x-ZO-ORu"/>
+                            <constraint firstItem="8tJ-DI-H9D" firstAttribute="top" secondItem="QTT-64-c81" secondAttribute="top" id="G2L-6H-WiT"/>
+                            <constraint firstItem="BLN-xh-iAq" firstAttribute="leading" secondItem="n6a-wN-3pY" secondAttribute="leading" id="K2u-Q4-wJh"/>
+                            <constraint firstItem="QvK-RE-kmf" firstAttribute="leading" secondItem="n6a-wN-3pY" secondAttribute="leading" id="KVC-SK-HcT"/>
+                            <constraint firstItem="sm5-TR-rP1" firstAttribute="leading" secondItem="n6a-wN-3pY" secondAttribute="leading" id="L3a-UH-EIR"/>
+                            <constraint firstItem="8tJ-DI-H9D" firstAttribute="leading" secondItem="QTT-64-c81" secondAttribute="leading" id="Nda-hh-v2z"/>
+                            <constraint firstItem="qSh-ZC-XZK" firstAttribute="top" secondItem="BLN-xh-iAq" secondAttribute="bottom" constant="30" id="Phc-YY-xia"/>
+                            <constraint firstItem="n6a-wN-3pY" firstAttribute="top" secondItem="8tJ-DI-H9D" secondAttribute="bottom" constant="15" id="Sb4-8Z-JFY"/>
+                            <constraint firstItem="BLN-xh-iAq" firstAttribute="trailing" secondItem="n6a-wN-3pY" secondAttribute="trailing" id="UaS-UR-TYo"/>
+                            <constraint firstItem="8tJ-DI-H9D" firstAttribute="centerX" secondItem="n6a-wN-3pY" secondAttribute="centerX" id="bcM-kr-aIz"/>
+                            <constraint firstItem="QvK-RE-kmf" firstAttribute="top" secondItem="BLN-xh-iAq" secondAttribute="bottom" constant="30" id="ia1-Dx-LNx"/>
+                            <constraint firstItem="QTT-64-c81" firstAttribute="trailing" secondItem="n6a-wN-3pY" secondAttribute="trailing" constant="20" id="ydQ-hg-sIQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QTT-64-c81"/>
+                    </view>
+                    <connections>
+                        <outlet property="companyNameLbl" destination="n6a-wN-3pY" id="ZaM-JV-ate"/>
+                        <outlet property="dateLbl" destination="QvK-RE-kmf" id="4N2-Iw-tUT"/>
+                        <outlet property="noticeDescriptionLbl" destination="sm5-TR-rP1" id="jme-4I-apw"/>
+                        <outlet property="noticeNameLbl" destination="BLN-xh-iAq" id="1wX-Ph-kP6"/>
+                        <outlet property="noticeTypeLbl" destination="qSh-ZC-XZK" id="scg-e3-ExH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="idf-LI-PDf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-930.43478260869574" y="33.482142857142854"/>
+        </scene>
+    </scenes>
+</document>
