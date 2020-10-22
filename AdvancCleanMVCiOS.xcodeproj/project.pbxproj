@@ -30,6 +30,7 @@
 		33D6EE4E253D5E080029D452 /* LaunchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D6EE43253D5E080029D452 /* LaunchRouter.swift */; };
 		33D6EE53253D5F560029D452 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D6EE52253D5F560029D452 /* Constants.swift */; };
 		33D6EE55253D63D90029D452 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D6EE41253D5E080029D452 /* LaunchScreen.storyboard */; };
+		FA0DA10025416370007890D1 /* NoticeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DA0EC254153A6007890D1 /* NoticeService.swift */; };
 		FA3EBD15253DCBB800A9093F /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EBD14253DCBB800A9093F /* LaunchViewController.swift */; };
 		FA3EBD1A253DCBC800A9093F /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3EBD19253DCBC800A9093F /* Launch.storyboard */; };
 		FA3EBD23253DCC2100A9093F /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EBD22253DCC2100A9093F /* ServiceLocator.swift */; };
@@ -83,6 +84,7 @@
 		33D6EE42253D5E080029D452 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33D6EE43253D5E080029D452 /* LaunchRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchRouter.swift; sourceTree = "<group>"; };
 		33D6EE52253D5F560029D452 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FA0DA0EC254153A6007890D1 /* NoticeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeService.swift; sourceTree = "<group>"; };
 		FA3EBD14253DCBB800A9093F /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		FA3EBD19253DCBC800A9093F /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		FA3EBD22253DCC2100A9093F /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			children = (
 				FA3EBD22253DCC2100A9093F /* ServiceLocator.swift */,
 				FA3EBD2A253DCC2E00A9093F /* Presenter.swift */,
+				FA0DA0EC254153A6007890D1 /* NoticeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				33D6EE4C253D5E080029D452 /* StoryboardInitable.swift in Sources */,
 				3361A074253EDC3300D495BC /* CellInterface.swift in Sources */,
 				33D6EE0B253D5D1D0029D452 /* SceneDelegate.swift in Sources */,
+				FA0DA10025416370007890D1 /* NoticeService.swift in Sources */,
 				3361A06A253EA3F500D495BC /* SigninViewController.swift in Sources */,
 				3361A081253FE5D400D495BC /* Notice.swift in Sources */,
 				FA3EBD15253DCBB800A9093F /* LaunchViewController.swift in Sources */,

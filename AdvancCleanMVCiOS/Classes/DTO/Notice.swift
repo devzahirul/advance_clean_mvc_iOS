@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NoticeModel {
+public struct NoticeModel {
     let companyName: String
     let noticeName: String
     let description: String
@@ -16,43 +16,4 @@ struct NoticeModel {
     let createDate: String
     let hasPdf: Bool
     let noticeCategory: String
-    
-    static func getTestingData() -> [NoticeModel] {
-        var data = [NoticeModel]()
-        let n1 = NoticeModel.init(companyName: "ABCD_1",
-                                  noticeName: "Notice_1",
-                                  description: "Notice_1_Description",
-                                  isNew: true,
-                                  createDate: "20/10/2020",
-                                  hasPdf: true,
-                                  noticeCategory:"Monthly Report")
-        let n2 = NoticeModel.init(companyName: "ABCD_2",
-                                  noticeName: "Notice_2",
-                                  description: "Notice_2_Description",
-                                  isNew: false,
-                                  createDate: "19/10/2020",
-                                  hasPdf: false,
-                                  noticeCategory:"Cleaning Report")
-        
-        let n3 = NoticeModel.init(companyName: "ABCD_3",
-                                  noticeName: "Notice_3",
-                                  description: "Notice_3_Description",
-                                  isNew: false,
-                                  createDate: "21/10/2020",
-                                  hasPdf: false,
-                                  noticeCategory:"Monthly Report")
-        let n4 = NoticeModel.init(companyName: "ABCD_4",
-                                  noticeName: "Notice_4",
-                                  description: "Notice_4_Description",
-                                  isNew: false,
-                                  createDate: "21/10/2020",
-                                  hasPdf: true,
-                                  noticeCategory:"Cleaning Report")
-        
-        data.append(contentsOf: [n1,n2,n3,n4])
-        data.append(contentsOf: [n1,n2,n3,n4])
-        data.append(contentsOf: [n1,n2,n3,n4])
-        data.append(contentsOf: [n1,n2,n3,n4])
-        return data
-    }
 }
