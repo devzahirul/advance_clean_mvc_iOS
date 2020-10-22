@@ -29,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func setupRouter() {
-        launcRouter.execute(context: window!)
+        launcRouter.execute(context: window!, info: nil)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
