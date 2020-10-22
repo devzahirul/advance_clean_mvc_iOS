@@ -36,7 +36,7 @@ protocol SignInPresenter: PresenterType {
 // Default implementation of SignInPresenter
 extension SignInPresenter {
     func showSigin(){
-        let signinRouter = SigninRouter()
+        let signinRouter = SigninRouter(serviceLocator: self.serviceLocator)
         signinRouter.execute(context: currentViewController, info: nil)
     }
 }
@@ -50,7 +50,7 @@ protocol NoticeListPresenter: PresenterType {
 // Default implementation
 extension NoticeListPresenter {
     func showNoticeList(){
-        let noticeRouter = NoticeRouter()
+        let noticeRouter = NoticeRouter(serviceLocator: self.serviceLocator)
         noticeRouter.execute(context: currentViewController, info: nil)
     }
 }

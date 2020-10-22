@@ -11,12 +11,11 @@ import UIKit
 class NoticeRouter: NoticeDetailPresenter {
     var currentViewController: UIViewController!
     
-    var serviceLocator: ServiceLocator!
+    private(set) var serviceLocator: ServiceLocator!
     
     
-    init() {
-        //init service
-        serviceLocator = ServiceLocator.init()
+    init(serviceLocator: ServiceLocator) {
+        self.serviceLocator = serviceLocator
     }
     
 }
@@ -30,6 +29,7 @@ extension NoticeRouter : Router{
         let noticeVC = NoticeViewController.create()
         noticeVC.modalPresentationStyle = .fullScreen
         noticeVC.setRouter(router: self)
+        noticeVC.setServiceLocator(serviceLocator: self.serviceLocator)
         currentViewController = noticeVC
         context.present(noticeVC, animated: false, completion: nil)
     }

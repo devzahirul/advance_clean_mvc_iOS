@@ -10,7 +10,7 @@ import Foundation
 
 public class NoticeService {
     
-     public func getTestingData() -> [NoticeModel] {
+      func fetchTestingData() -> [NoticeModel] {
         var data = [NoticeModel]()
         
         // Create few demo notuce

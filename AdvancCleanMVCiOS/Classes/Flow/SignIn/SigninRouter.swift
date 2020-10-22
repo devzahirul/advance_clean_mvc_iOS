@@ -14,9 +14,9 @@ class SigninRouter: NoticeListPresenter {
     var serviceLocator: ServiceLocator!
     
     
-    init() {
+    init(serviceLocator: ServiceLocator) {
         //init service
-        serviceLocator = ServiceLocator.init()
+        self.serviceLocator = serviceLocator
     }
     
 }

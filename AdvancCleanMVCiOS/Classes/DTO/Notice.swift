@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NoticeModel {
+public struct NoticeModel {
     let companyName: String
     let noticeName: String
     let description: String

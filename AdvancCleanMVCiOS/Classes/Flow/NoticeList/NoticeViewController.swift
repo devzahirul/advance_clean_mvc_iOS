@@ -16,8 +16,9 @@ class NoticeViewController: UIViewController, StoryboardInitable {
     
     
     static var storyboardName: String = "Notice"
-    private lazy var noticeListAdapter = NoticeListAdapter()
+    private lazy var noticeListAdapter = NoticeListAdapter(serviceLocator: self.serviceLocator)
     private var router: NoticeRouterInterface!
+    private var serviceLocator: ServiceLocator!
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -35,6 +36,8 @@ class NoticeViewController: UIViewController, StoryboardInitable {
     }
     
     private func setupAdapter() {
+        let noticeService: NoticeService = self.serviceLocator.getService()
+        noticeListAdapter.updateAdapter(with: noticeService.fetchTestingData())
         tableView.dataSource = noticeListAdapter
         noticeListAdapter.delegate = self
     }
@@ -42,6 +45,11 @@ class NoticeViewController: UIViewController, StoryboardInitable {
     // Setup Methods
     func setRouter(router: NoticeRouterInterface) {
         self.router = router
+    }
+    
+    // Setup ServiceLocator
+    func setServiceLocator(serviceLocator: ServiceLocator) {
+        self.serviceLocator = serviceLocator
     }
 }
 

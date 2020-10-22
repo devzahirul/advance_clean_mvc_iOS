@@ -32,9 +32,12 @@ public class NoticeListAdapter: NSObject {
     // Is Used for Call delegate method when needed
     weak var delegate: NoticeListAdapterDelegate?
     
+    // Service Locator
+    private(set) var serviceLocator: ServiceLocator
+    
     // noticeList is an Array of NoticeModel struct
     // Added didSet observer which will be called when value changed
-    private var noticeList = NoticeModel.getTestingData(){
+    private var noticeList: [NoticeModel] = [NoticeModel]() {
         didSet {
             // Call delegate method for notifying that data is available
             // It used for reload UITableView
@@ -46,6 +49,11 @@ public class NoticeListAdapter: NSObject {
     private var noticeListQuantity: Int {
         return noticeList.count
     }
+    
+    init(serviceLocator: ServiceLocator) {
+        self.serviceLocator = serviceLocator
+    }
+    
 }
 
 
@@ -55,6 +63,10 @@ extension NoticeListAdapter {
     // Return notice model based on IndexPath row
     public func getNoticeList(atIndexPath indexPath: NSIndexPath) -> NoticeModel {
         return noticeList[indexPath.row]
+    }
+    
+    public func updateAdapter(with noticeList: [NoticeModel]) {
+        self.noticeList = noticeList
     }
 }
 

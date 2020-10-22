@@ -17,7 +17,7 @@ class LaunchRouter: SignInPresenter, NoticeListPresenter {
     init() {
         //init service
         serviceLocator = ServiceLocator.init()
-        serviceLocator.register(service: NoticeService())
+        serviceLocator.register(service: NoticeService.init())
     }
     
 }
