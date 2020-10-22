@@ -11,7 +11,7 @@ import UIKit
 // Used for presend ViewController
 protocol Router: class {
     associatedtype Context
-    func execute(context: Context)
+    func execute(context: Context, info: AnyObject?)
 }
 
 // Used for handle navigation
@@ -37,7 +37,7 @@ protocol SignInPresenter: PresenterType {
 extension SignInPresenter {
     func showSigin(){
         let signinRouter = SigninRouter()
-        signinRouter.execute(context: currentViewController)
+        signinRouter.execute(context: currentViewController, info: nil)
     }
 }
 
@@ -51,7 +51,7 @@ protocol NoticeListPresenter: PresenterType {
 extension NoticeListPresenter {
     func showNoticeList(){
         let noticeRouter = NoticeRouter()
-        noticeRouter.execute(context: currentViewController)
+        noticeRouter.execute(context: currentViewController, info: nil)
     }
 }
 
@@ -61,6 +61,7 @@ extension NoticeListPresenter {
 protocol NoticeDetailPresenter: PresenterType {
     func showNoticeDetail(with noticeId: Int)
     func showNoticeDetail(with noticeId: String)
+    func showNoticeDetail(with notice: NoticeModel)
 }
 
 
@@ -68,4 +69,8 @@ protocol NoticeDetailPresenter: PresenterType {
 extension NoticeDetailPresenter {
     func showNoticeDetail(with noticeId: Int){}
     func showNoticeDetail(with noticeId: String){}
+    func showNoticeDetail(with notice: NoticeModel){
+        let noticeRouter = NoticeDetailsRouter()
+        noticeRouter.execute(context: currentViewController, info: notice as AnyObject)
+    }
 }

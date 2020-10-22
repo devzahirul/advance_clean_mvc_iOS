@@ -22,7 +22,7 @@ class LaunchRouter: SignInPresenter, NoticeListPresenter {
 }
 
 extension LaunchRouter: Router {
-    func execute(context: UIWindow) {
+    func execute(context: UIWindow, info: AnyObject?) {
         
         //check your opening logic
         //setup router

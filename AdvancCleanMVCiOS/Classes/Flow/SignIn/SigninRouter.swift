@@ -23,7 +23,7 @@ class SigninRouter: NoticeListPresenter {
 
 extension SigninRouter : Router{
     // Create & show signin view
-    func execute(context: UIViewController) {
+    func execute(context: UIViewController, info: AnyObject?) {
         
         //check your opening logic
         //setup router

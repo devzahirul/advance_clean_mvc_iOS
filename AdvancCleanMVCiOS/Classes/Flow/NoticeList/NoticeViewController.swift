@@ -8,6 +8,8 @@
 
 import UIKit
 
+typealias NoticeRouterInterface = NoticeDetailPresenter
+
 class NoticeViewController: UIViewController, StoryboardInitable {
     //MARK: IBOUTLETS
     @IBOutlet weak var tableView: UITableView!
@@ -15,7 +17,7 @@ class NoticeViewController: UIViewController, StoryboardInitable {
     
     static var storyboardName: String = "Notice"
     private lazy var noticeListAdapter = NoticeListAdapter()
-
+    private var router: NoticeRouterInterface!
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -36,6 +38,11 @@ class NoticeViewController: UIViewController, StoryboardInitable {
         tableView.dataSource = noticeListAdapter
         noticeListAdapter.delegate = self
     }
+    
+    // Setup Methods
+    func setRouter(router: NoticeRouterInterface) {
+        self.router = router
+    }
 }
 
 extension NoticeViewController : NoticeListAdapterDelegate
@@ -47,16 +54,11 @@ extension NoticeViewController : NoticeListAdapterDelegate
 
 extension NoticeViewController : UITableViewDelegate
 {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 5
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: NoticeCell.id, for: indexPath) as! NoticeCell
-//
-//        return cell
-//    }
-//
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let notice = noticeListAdapter.getNoticeList(atIndexPath: indexPath as NSIndexPath)
+        router.showNoticeDetail(with: notice)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
     }
