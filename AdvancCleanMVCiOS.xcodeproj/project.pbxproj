@@ -108,15 +108,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3361A075253EDE3600D495BC /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				3361A076253EDE4E00D495BC /* NoticeCell.swift */,
-				3361A078253EDE6F00D495BC /* NoticeCell.xib */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		3361A07C253FD89F00D495BC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,7 +188,6 @@
 		33D6EE3B253D5E080029D452 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				3361A075253EDE3600D495BC /* Views */,
 				33D6EE3C253D5E080029D452 /* Protocol */,
 			);
 			path = Misc;
@@ -226,6 +216,7 @@
 		33D6EE3F253D5E080029D452 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				FA0DA0E825412DA1007890D1 /* Misc */,
 				FA3EBD31253DCD5500A9093F /* NoticeDetail */,
 				FA3EBD30253DCD4700A9093F /* NoticeList */,
 				FA3EBD2F253DCD3700A9093F /* SignIn */,
@@ -242,6 +233,15 @@
 				FA3EBD19253DCBC800A9093F /* Launch.storyboard */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		FA0DA0E825412DA1007890D1 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				3361A076253EDE4E00D495BC /* NoticeCell.swift */,
+				3361A078253EDE6F00D495BC /* NoticeCell.xib */,
+			);
+			path = Misc;
 			sourceTree = "<group>";
 		};
 		FA3EBD21253DCC0E00A9093F /* Services */ = {
