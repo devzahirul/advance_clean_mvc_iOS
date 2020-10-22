@@ -23,12 +23,13 @@ class NoticeRouter: NoticeDetailPresenter {
 
 extension NoticeRouter : Router{
     // Create & show signin view
-    func execute(context: UIViewController) {
+    func execute(context: UIViewController, info: AnyObject?) {
         
         //check your opening logic
         //setup router
         let noticeVC = NoticeViewController.create()
         noticeVC.modalPresentationStyle = .fullScreen
+        noticeVC.setRouter(router: self)
         currentViewController = noticeVC
         context.present(noticeVC, animated: false, completion: nil)
     }
