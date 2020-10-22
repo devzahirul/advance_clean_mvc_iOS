@@ -59,7 +59,7 @@
             <connections>
                 <outlet property="companyNameLbl" destination="Zi0-R7-b6v" id="dFu-IM-1hj"/>
                 <outlet property="dateLbl" destination="viF-8u-Dxk" id="7ct-vs-f8c"/>
-                <outlet property="noticeDescriptionLbl" destination="e2d-lY-8V6" id="TgA-7M-t7g"/>
+                <outlet property="noticeNameLbl" destination="e2d-lY-8V6" id="KNo-cO-Ocm"/>
                 <outlet property="noticeTypeLbl" destination="GqH-zJ-PNH" id="5sN-yi-kf9"/>
             </connections>
             <point key="canvasLocation" x="180.80000000000001" y="60.26986506746627"/>
