@@ -33,6 +33,7 @@
 		33D6EE53253D5F560029D452 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D6EE52253D5F560029D452 /* Constants.swift */; };
 		33D6EE55253D63D90029D452 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D6EE41253D5E080029D452 /* LaunchScreen.storyboard */; };
 		3CD40AE91CADED10F2D61F3F /* Pods_AdvancCleanMVCiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA8C3EC462EC024F7D3A4433 /* Pods_AdvancCleanMVCiOS.framework */; };
+		9A8D8FBB254FAE3900B47D7D /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8D8FBA254FAE3900B47D7D /* FirebaseManager.swift */; };
 		C3A4659F156631BA14038E50 /* Pods_AdvancCleanMVCiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CAD2FA5D4E025803793798E /* Pods_AdvancCleanMVCiOSTests.framework */; };
 		FA0DA10025416370007890D1 /* NoticeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0DA0EC254153A6007890D1 /* NoticeService.swift */; };
 		FA3EBD15253DCBB800A9093F /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EBD14253DCBB800A9093F /* LaunchViewController.swift */; };
@@ -93,6 +94,7 @@
 		4CE59A82734CE746AB750752 /* Pods_AdvancCleanMVCiOS_AdvancCleanMVCiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdvancCleanMVCiOS_AdvancCleanMVCiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D8FF544E1576211BB0246C /* Pods-AdvancCleanMVCiOS-AdvancCleanMVCiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancCleanMVCiOS-AdvancCleanMVCiOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-AdvancCleanMVCiOS-AdvancCleanMVCiOSUITests/Pods-AdvancCleanMVCiOS-AdvancCleanMVCiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7CAD2FA5D4E025803793798E /* Pods_AdvancCleanMVCiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdvancCleanMVCiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A8D8FBA254FAE3900B47D7D /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		AA8C3EC462EC024F7D3A4433 /* Pods_AdvancCleanMVCiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdvancCleanMVCiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE903A5DC881C8DCFA9BFBD /* Pods-AdvancCleanMVCiOS-AdvancCleanMVCiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancCleanMVCiOS-AdvancCleanMVCiOSUITests.release.xcconfig"; path = "Target Support Files/Pods-AdvancCleanMVCiOS-AdvancCleanMVCiOSUITests/Pods-AdvancCleanMVCiOS-AdvancCleanMVCiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B593D61BEE1CBFC4FECC541F /* Pods-AdvancCleanMVCiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancCleanMVCiOS.release.xcconfig"; path = "Target Support Files/Pods-AdvancCleanMVCiOS/Pods-AdvancCleanMVCiOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				FA3EBD22253DCC2100A9093F /* ServiceLocator.swift */,
 				FA3EBD2A253DCC2E00A9093F /* Presenter.swift */,
 				FA0DA0EC254153A6007890D1 /* NoticeService.swift */,
+				9A8D8FBA254FAE3900B47D7D /* FirebaseManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 			files = (
 				3361A068253EA3E000D495BC /* SigninRouter.swift in Sources */,
 				33D6EE09253D5D1D0029D452 /* AppDelegate.swift in Sources */,
+				9A8D8FBB254FAE3900B47D7D /* FirebaseManager.swift in Sources */,
 				3361A07E253FD8DB00D495BC /* NoticeListAdapter.swift in Sources */,
 				3361A08325412F9B00D495BC /* NoticeDetailsRouter.swift in Sources */,
 				33D6EE4E253D5E080029D452 /* LaunchRouter.swift in Sources */,

@@ -23,6 +23,7 @@ class SigninViewController: UIViewController, StoryboardInitable {
     //MARK: IBACTIONS
     @IBAction func clickedSigninButton(_ sender: Any) {
 //        noticeRouter.execute(context: self)
+        FirebaseManager.sendAnalytics(eventName: "sign_in_button_clicked", params: ["user_level" : "01", "level_name" : "initialLevel"])
         router.showNoticeList()
     }
     

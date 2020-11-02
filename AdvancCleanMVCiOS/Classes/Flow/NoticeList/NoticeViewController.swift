@@ -64,6 +64,7 @@ extension NoticeViewController : UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let notice = noticeListAdapter.getNoticeList(atIndexPath: indexPath as NSIndexPath)
+        FirebaseManager.sendAnalytics(eventName: "click_notice_detail", params: ["notice_name" : notice.noticeName, "notice_category" : notice.noticeCategory])
         router.showNoticeDetail(with: notice)
     }
     
