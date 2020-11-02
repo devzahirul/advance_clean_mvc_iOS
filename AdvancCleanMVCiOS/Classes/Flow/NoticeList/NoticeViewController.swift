@@ -31,7 +31,6 @@ class NoticeViewController: UIViewController, StoryboardInitable {
     // MARK: - Private methods
     private func setupTableView() {
         tableView.delegate = self
-        print("NOTIceCELL: \(NoticeCell.id)")
         tableView.register(NoticeCell.cellNib, forCellReuseIdentifier: NoticeCell.id)
     }
     
@@ -44,6 +43,7 @@ class NoticeViewController: UIViewController, StoryboardInitable {
     
     // Setup Methods
     func setRouter(router: NoticeRouterInterface) {
+        //set router
         self.router = router
     }
     
